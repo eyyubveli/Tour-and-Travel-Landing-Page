@@ -4,7 +4,7 @@
 ## Installation
 ```
 git clone https://github.com/eyyubveli/Tour-and-Travel-Landing-Page.git
-cd tourandtravel
+cd Tour-and-Travel-Landing-Page
 npm install
 ```
 
