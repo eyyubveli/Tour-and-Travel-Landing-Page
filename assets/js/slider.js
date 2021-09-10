@@ -1,0 +1,1 @@
+var swiper=new Swiper(".mySwiper",{navigation:{nextEl:".next",prevEl:".previous"},autoplay:{delay:2500,disableOnInteraction:!0}});

@@ -1,0 +1,39 @@
+.header {
+    margin-top: 35px;
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-open {
+        display: none;
+    }
+
+    @include mq("tablet") {
+        background-color: white;
+
+        transition: all 500ms;
+        position: relative;
+        width: 100%;
+        z-index: 111;
+        top: 0;
+        left: 0;
+
+        &-open {
+            display: block;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        &.active {
+            margin-top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+        }
+    }
+
+
+}

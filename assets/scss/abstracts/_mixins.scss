@@ -1,0 +1,55 @@
+@mixin flex-align {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@mixin flex-f {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin arrow {
+    display: flex;
+    align-items: center;
+    color: #FB8F1D;
+    font-size: 17px;
+    font-family: "Inter", serif;
+    font-weight: 600;
+
+    img{
+        margin-left: 11px;
+    }
+}
+
+@mixin mq($width:'mobile') {
+    @if ($width=='mainm') {
+        @media (max-width:576px) {
+            @content;
+        }
+    }
+
+    @else if ($width=='mobile') {
+        @media (max-width:768px) {
+            @content;
+        }
+    }
+
+    @else if($width=='tablet') {
+        @media (max-width:992px) {
+            @content;
+        }
+    }
+
+    @else if($width=='desktop') {
+        @media(max-width:1200px) {
+            @content;
+        }
+    }
+}

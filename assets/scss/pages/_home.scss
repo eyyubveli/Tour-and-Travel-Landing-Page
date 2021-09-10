@@ -1,0 +1,838 @@
+@import "base/animation";
+
+.explore {
+    margin-top: 100px;
+    position: relative;
+
+    &-inner {
+        @include flex;
+        justify-content: space-between;
+    }
+
+    &-left {
+
+        max-width: 500px;
+
+        .holiday-inner {
+
+
+            &-text {
+                font-size: 2.2rem;
+                color: $active-link;
+                font-weight: 600;
+                line-height: 27px;
+                margin-top: 74px;
+                position: relative;
+
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 32px;
+                    height: 2px;
+                    background-color: $active-link;
+                    display: inline-block;
+                    bottom: 0;
+                    margin-bottom: -20px;
+
+                }
+            }
+
+            .form {
+
+                margin-top: 68px;
+
+                &-inner {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                }
+
+                &-item {
+                    width: calc(50% - 30px);
+                    max-width: 220px;
+                    border-radius: 6px;
+                    border: 1px solid $select;
+                    margin-right: 30px;
+                    margin-bottom: 35px;
+
+                    .select {
+                        width: 100%;
+                        display: block;
+                        min-height: 52px;
+
+                    }
+
+                    select {
+                        -webkit-appearance: none;
+                        appearance: none;
+
+                        min-height: 52px;
+                        width: 100%;
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: $select-text;
+                        padding-left: 31px;
+                        line-height: 32px;
+                        background-color: transparent;
+                        background-image: url(../img/Frame.svg);
+                        background-repeat: no-repeat;
+                        background-position: calc(100% - 30.5px) center;
+                    }
+                }
+
+                &-item:nth-child(2),
+                &-item:nth-child(4) {
+                    margin-right: 0;
+                }
+
+                &-btn {
+                    button {
+                        background-color: $btn;
+                        color: $white;
+                        display: inline-block;
+                        padding: 4px 60px;
+                        cursor: pointer;
+                        height: 52px;
+                        border-radius: 8px;
+                        font-family: 'Mulish', serif;
+                        font-weight: 700;
+                        font-size: 17px;
+                        display: flex;
+                        align-items: center;
+                        transition: all 500ms;
+                        line-height: 52px;
+
+                        &:hover {
+                            background-color: transparent;
+                            color: $btn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &-left,
+    &-right {
+        width: 50%;
+    }
+
+    &-right {
+        img {
+            max-width: 100%;
+            height: auto;
+            animation: thousand 2s ease-out infinite alternate;
+        }
+    }
+
+    &--title {
+        font-size: 6.4rem;
+        font-family: 'Playfair Display', serif;
+        color: $active-link;
+        font-weight: 700;
+        line-height: 80px;
+    }
+
+
+    &-img-group {
+
+
+        img {
+            display: block;
+        }
+
+
+
+        .el1 {
+            position: absolute;
+            top: 44%;
+            left: 21px;
+            animation: rotate-2 2s ease infinite alternate;
+        }
+
+
+
+        .el2 {
+            position: absolute;
+            left: 46%;
+            top: 90%;
+            animation: rotate-el-2 1.5s ease infinite alternate;
+        }
+
+        .el3 {
+            position: absolute;
+            left: 42%;
+            animation: rotate-el 1s ease-in-out infinite alternate;
+        }
+
+    }
+
+    @include mq() {
+        &-inner {
+            flex-direction: column;
+        }
+
+        &-left,
+        &-right {
+            width: 100%;
+        }
+
+        &-right {
+            margin-top: 50px;
+            text-align: center;
+
+            img {
+                max-width: 80%;
+            }
+        }
+
+        &--title {
+            font-size: 5.4rem;
+            text-align: center;
+        }
+
+        .form-inner {
+            justify-content: center;
+        }
+
+        .form-btn {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @include mq("mainm") {
+        select {
+            padding-left: 20px !important;
+            background-position: calc(113% - 30.5px) center !important;
+        }
+
+        &--title {
+            font-size: 4.4rem;
+        }
+
+        .holiday-inner {
+            &-text {
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .form-item {
+                margin-right: 20px;
+                width: calc(50% - 20px);
+            }
+        }
+
+        .el1 {
+            top: 53%;
+            left: 6px;
+        }
+
+    }
+}
+
+.new-way {
+    margin-top: 200px;
+
+    &-inner {
+        @include flex;
+        position: relative;
+    }
+
+    &-left {
+        width: 50%;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            animation: rotate-2 2s infinite alternate;
+        }
+    }
+
+    &-right {
+        width: calc(50% - 80px);
+        max-width: 440px;
+        margin-left: 80px;
+
+
+
+        .way1 {
+            position: absolute;
+            left: 50%;
+            top: -47px;
+            animation: rotate-el 1s ease-in-out infinite alternate;
+        }
+
+        .way2 {
+            position: absolute;
+            right: 11%;
+            bottom: 26%;
+            animation: rotate-el-2 3s ease-in infinite alternate;
+        }
+
+    }
+
+    &-title {
+        @include title;
+    }
+
+    &-subtitle {
+        @include subtitle;
+    }
+
+    &-btn {
+        padding: 6px 37px;
+        background-color: $btn;
+        color: $white;
+        min-height: 48px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-family: 'Inter', serif;
+        font-weight: 600;
+        margin-top: 33px;
+        cursor: pointer;
+        transition: all 500ms;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    @include mq() {
+        &-inner {
+            flex-direction: column;
+        }
+
+        &-left,
+        &-right {
+            width: 100%;
+        }
+
+        &-left {
+            text-align: center;
+
+            img {
+                max-width: 80%;
+            }
+        }
+
+
+        &-right {
+            margin-left: 0;
+        }
+    }
+
+
+}
+
+.feature {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    position: relative;
+
+    &-top {
+        @include flex-f;
+    }
+
+    &-title {
+        @include title;
+    }
+
+    &-view {
+        @include arrow;
+
+        img {
+            margin-left: 11px;
+        }
+
+    }
+
+    &-inner {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        margin-top: 46px;
+    }
+
+
+    &-box {
+        border-radius: 8px;
+        position: relative;
+    }
+
+    &-img {
+        height: auto;
+        object-fit: cover;
+        display: block;
+        border-radius: 8px;
+
+
+    }
+
+    &-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $white;
+        padding: 11px 22px 5px 0;
+        border-top-right-radius: 8px;
+
+        h5 {
+            font-size: 17px;
+            color: $featured-title;
+            font-family: 'Inter', serif;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        span {
+
+            font-size: 15px;
+            font-family: 'Inter', serif;
+            font-weight: 500;
+            color: $featured-subtitle;
+            line-height: 24px;
+        }
+    }
+
+    &-img-group {
+        .f1 {
+            position: absolute;
+            top: 65%;
+            left: 50px;
+            animation: rotate-el 2s ease-in infinite alternate;
+        }
+
+        .f2 {
+            top: -10%;
+            position: absolute;
+            right: 22%;
+            animation: rotate-el-2 2s infinite alternate;
+        }
+
+        .f3 {
+            position: absolute;
+            left: 45%;
+            top: 110%;
+            animation: thousand 2s infinite alternate;
+        }
+    }
+
+    @include mq("tablet") {
+        &-inner {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include mq("mainm") {
+        &-inner {
+            grid-template-columns: 1fr;
+        }
+
+        &-title {
+            font-size: 3rem;
+        }
+
+        &-top {
+            flex-direction: column;
+        }
+
+        &-img {
+            max-width: 100%;
+        }
+    }
+}
+
+.guides {
+
+    position: relative;
+
+    &-inner {
+        @include flex;
+    }
+
+    &-left {
+        width: calc(50% - 80px);
+        margin-right: 80px;
+        position: relative;
+    }
+
+    &-right {
+        width: 50%;
+
+        .th {
+            animation: thousand 2s ease-in-out infinite alternate;
+        }
+    }
+
+    &-content {
+        max-width: 450px;
+    }
+
+    &--title {
+        @include title;
+    }
+
+    &--subtitle {
+        @include subtitle;
+    }
+
+    &--link {
+        @include button;
+        padding: 6px 43px;
+        background-color: $btn;
+        display: inline-flex;
+        align-items: center;
+        color: $white;
+        font-weight: 600;
+        font-size: 16px;
+        height: 48px;
+        margin-top: 39px;
+        transition: all 500ms;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    .g1 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        animation: rotate-el 2s ease infinite alternate;
+    }
+
+    .g2 {
+        position: absolute;
+        top: -47px;
+        left: 47px;
+        animation: rotate-el-2 3s infinite alternate;
+    }
+
+    .gr {
+        position: absolute;
+        right: 50px;
+        top: 30px;
+        bottom: 100%;
+    }
+
+    @include mq() {
+        &-inner {
+            flex-direction: column;
+        }
+
+        &-content {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &-left {
+            order: 1;
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &-right {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+
+            .th {
+                max-width: 80%;
+            }
+        }
+
+
+    }
+
+    @include mq("mainm") {
+        &-content {
+            text-align: center;
+        }
+
+        &--subtitle {
+            font-size: 16px;
+        }
+    }
+}
+
+.testimonials {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    position: relative;
+
+    &-inner {
+        @include flex;
+        justify-content: space-between;
+    }
+
+
+
+    &-right {
+        width: auto;
+        position: relative;
+        padding-right: 20px;
+        padding-top: 20px;
+
+        .t1 {
+            position: absolute;
+            left: -8px;
+            bottom: -1px;
+            width: 31px;
+            height: 31px;
+        }
+
+        .t2 {
+            width: 31px;
+            height: 31px;
+            position: absolute;
+            right: 7px;
+            top: 12px;
+            z-index: -1;
+        }
+
+        .slide-control {
+            position: absolute;
+            bottom: 12px;
+            right: 24px;
+            width: 132px;
+            height: 60px;
+            background-color: $white;
+            border-top-left-radius: 8px;
+            text-align: right;
+
+
+            img {
+                padding-top: 20px;
+            }
+
+            .next {
+                margin-left: 22px;
+                cursor: pointer;
+            }
+
+            .previous {
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    .t3 {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        animation: rotate-el 2s infinite alternate;
+
+    }
+
+    &-title {
+        @include title;
+        margin-bottom: 60px;
+    }
+
+    &-content {
+        max-width: 450px;
+
+        .rating {
+            margin-bottom: 30px;
+
+            i {
+                color: $btn;
+            }
+        }
+
+        .quote {
+            margin-bottom: 40px;
+
+            p {
+                font-family: 'Mulish', serif;
+                font-weight: 400;
+                font-size: 2.4rem;
+                line-height: 36px;
+                color: $black;
+            }
+        }
+
+        .author {
+
+            h5 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                line-height: 48px;
+                color: $black;
+            }
+
+            span {
+                color: rgba(0, 0, 0, .85);
+                font-size: 1.8rem;
+                line-height: 48px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    @include mq("tablet") {
+        &-inner {
+            justify-content: center;
+        }
+
+        &-left {
+            order: 1;
+
+            .rating {
+                margin-top: 20px;
+            }
+        }
+
+        &-title {
+            text-align: center;
+        }
+
+        &-content {
+            .quote {
+                margin-bottom: 15px;
+
+                p {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+
+        &-right {
+            .slide-control {
+                bottom: 8px;
+                right: 22px;
+            }
+
+            .t1 {
+                left: 0;
+                bottom: -4px;
+            }
+        }
+    }
+}
+
+.blog {
+    position: relative;
+    margin-bottom: 200px;
+
+    &-inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+
+    &-top {
+        @include flex-f;
+        margin-bottom: 46px;
+    }
+
+    &-title {
+        @include title;
+    }
+
+    &-link {
+        @include arrow;
+
+
+    }
+
+    &-img {
+        img {
+            height: 230px;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+    }
+
+    &-middle {
+        h4 {
+            a {
+                color: $black;
+                font-size: 19px;
+                line-height: 30px;
+                font-weight: 700;
+                display: inline-block;
+                margin-top: 13px;
+                margin-bottom: 13px;
+            }
+        }
+    }
+
+    &-bottom {
+        p {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 26px;
+            color: $new-way-text;
+            padding-right: 5px;
+            margin-bottom: 23px;
+        }
+
+        a {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 28px;
+            color: $btn;
+        }
+    }
+
+    &-el-group {
+        .b1 {
+            position: absolute;
+            left: 550px;
+            top: -60px;
+            animation: rotate-el-2 2s infinite alternate;
+        }
+
+        .b2 {
+            position: absolute;
+            left: 0;
+            top: 65%;
+            left: 50px;
+        }
+
+        .b3 {
+            position: absolute;
+            bottom: 0;
+            top: 115%;
+            left: 63%;
+        }
+    }
+
+    @include mq("tablet") {
+        &-inner {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include mq() {
+        &-top {
+            flex-direction: column;
+        }
+
+        &-inner {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @include mq("mainm") {
+        .b1 {
+            left: 250px;
+        }
+
+        .b2 {
+            display: none;
+        }
+    }
+
+}
+

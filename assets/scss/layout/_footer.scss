@@ -1,0 +1,104 @@
+.footer {
+    background-color: $footer;
+
+    &-inner {
+        @include flex;
+        align-items: flex-start;
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+
+
+    &-box {
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    &-box:nth-child(1) {
+        padding-left: 0;
+    }
+
+
+    &-content {
+
+        font-family: 'Mulish', serif;
+
+        p {
+            font-size: 18px;
+            color: $footer-text;
+            line-height: 28px;
+            font-weight: 300;
+        }
+
+        span {
+            font-size: 17px;
+            line-height: 28px;
+            font-weight: 300;
+            color: $footer-text;
+            margin-top: 55px;
+            display: block;
+        }
+
+        h4 {
+            font-size: 19px;
+            line-height: 60px;
+            color: $black;
+            font-weight: 700;
+        }
+
+        ul {
+            li {
+                font-size: 18px;
+                color: $footer-text;
+                line-height: 38px;
+                font-weight: 300;
+            }
+        }
+
+        img {
+            margin-bottom: 26px;
+        }
+    }
+
+    &-bottom {
+        border-top: 1px solid #C4C4C4;
+        padding-top: 30.4px;
+        padding-bottom: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-social {
+            @include flex;
+            justify-content: center;
+
+            a {
+                margin-right: 35px;
+
+                &:nth-child(5) {
+                    margin-right: 0;
+                }
+
+            }
+
+
+
+        }
+    }
+
+    @include mq("tablet") {
+        &-box {
+            width: 50%;
+            justify-content: center;
+        }
+    }
+
+    @include mq("mainm") {
+        &-box {
+            width: 100%;
+            justify-content: flex-start;
+        }
+    }
+}

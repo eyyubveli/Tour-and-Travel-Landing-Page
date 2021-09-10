@@ -1,0 +1,16 @@
+@mixin title {
+    font-size: 3.6rem;
+    color: $black;
+    font-family: 'Playfair Display', serif;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+@mixin subtitle {
+    color: #7D7987;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 300;
+    font-family: "Mulish", serif;
+    margin-top: 20px;
+}

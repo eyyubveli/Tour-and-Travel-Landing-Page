@@ -1,0 +1,35 @@
+@include mq("tablet"){
+    .nav{
+        position: absolute;
+        width: 100%;
+        left: -300%;
+        top: -33px;
+        background-color: $white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+        flex-direction: column;
+        z-index: -1;
+        transition: all 400ms;
+
+        &--link{
+            margin-bottom: 30px;
+            margin-right: 0 !important;
+        }
+
+
+        .n-1{
+            margin-top: 72px;
+        }
+
+        &-group {
+            align-items: center;
+
+            .nav--link:nth-child(2){
+                margin-left: 25px;
+            }
+        }
+
+        &.active{
+            left: 0;
+        }
+    }
+}

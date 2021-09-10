@@ -1,0 +1,53 @@
+.nav {
+    @include flex-align;
+
+    &--link {
+        color: $passive;
+        margin-right: 35px;
+        display: inline-block;
+        transition: color 500ms;
+
+        &:hover {
+            color: $active-link;
+        }
+    }
+
+
+
+    &--login {
+        color: $btn;
+        border: 1px solid $btn;
+        @include button;
+        @include flex-align;
+        padding: 8px 46px;
+
+        &:hover {
+            background-color: $btn;
+            color: $white;
+            transition: all 350ms;
+        }
+    }
+
+    &--register {
+        @include button;
+        @include flex-align;
+        padding: 8px 36px;
+        background-color: $btn;
+        color: $white;
+        margin-right: 0;
+
+        &:hover {
+            background-color: transparent;
+            color: $btn;
+            transition: all 350ms;
+        }
+    }
+
+    &-group {
+        display: flex;
+
+
+    }
+
+
+}
