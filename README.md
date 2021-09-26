@@ -11,7 +11,9 @@ npm install
 ```
 
 ## Start
- `gulp`
+ ```
+ gulp
+ ```
 
 enter `localhost:3000` </a> in browser
 
